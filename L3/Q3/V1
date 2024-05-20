@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int alturaDeChico = 150;
+  int alturaDeJuca = 110;
+  int anos = 0;
+
+  do
+  {
+    cout << "Altura de Chico: " << float( alturaDeChico )/100 << "m\n";
+    cout << "Altura de Juca: " << float( alturaDeJuca )/100 << "m\n";
+    cout << "Anos: " << anos << endl;
+    
+    alturaDeChico += 2;
+    alturaDeJuca += 3;
+    anos++;
+  }    
+  while( alturaDeJuca < alturaDeChico );
+  return 0;
+}
