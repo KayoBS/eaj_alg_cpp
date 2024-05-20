@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int age, code, bestOldCode, bestYoungAge = 50, bestOldAge = 50;
+
+  cout << "Hello! Put the age of a person \n";
+
+  for( code = 1; code <= 100; code++)
+  {
+    cout << "\nCode: " <<code;
+    cout << "\nAge: ";
+    cin >> age;
+
+    age < bestYoungAge ? bestYoungAge = age : bestOldAge = 1000;
+    age > bestOldAge ? bestOldCode = code : bestOldAge = 1000;
+  }
+
+  cout << "\n\nBest old code: " << bestOldCode;
+  cout << "\nBest young age: " << bestYoungAge;
+}
