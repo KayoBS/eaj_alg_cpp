@@ -28,12 +28,15 @@ int main()
 
     numeroDeMultas > NMMMNM ? MMNM = numeroDaCarteira : lixo = MMNM;
     numeroDeMultas > NMMMNM ? NMMMNM = numeroDeMultas : lixo = MMNM;
-
+    
+    int numeroDaMulta = 1;
+    
     for( int n = numeroDeMultas; n > 0; n --)
     {
-      cout << "\n\t Valor da multa: ";
+      cout << "\n\t Valor da multa " << numeroDaMulta << ": ";
       cin >> valorDasMultas;
       totalDeFundos += valorDasMultas;
+      numeroDaMulta++;
     }
 
     cout << "\nAdicionar motorista? s ou n\n";
