@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int totalDeFundos = 0;
+  int numeroDaCarteira;
+  int numeroDeMultas;
+  int valorDasMultas;
+  int MMNM = 0; //Motorista com Maior Numero de Multas
+  int NMMMNM = 0; //Numero de Multas do Motorista com Maior Numero de Multas
+
+  char escolhaBinaria = 's';
+
+  int lixo = 0;
+
+  cout << "Este programa calcula o total de fundos arrecadados pelo DETRAN por meio de multas";
+
+  cout << "\nAdicionar motorista? s ou n\n";
+  cin >> escolhaBinaria;
+
+  while( escolhaBinaria == 's' )
+  { 
+    cout << "\n\n\t digite o numero da carteira: ";
+    cin >> numeroDaCarteira;
+    cout << "\n\t Numero de multas: ";
+    cin >> numeroDeMultas;
+
+    numeroDeMultas > NMMMNM ? MMNM = numeroDaCarteira : lixo = MMNM;
+    numeroDeMultas > NMMMNM ? NMMMNM = numeroDeMultas : lixo = MMNM;
+
+    for( int n = numeroDeMultas; n > 0; n --)
+    {
+      cout << "\n\t Valor da multa: ";
+      cin >> valorDasMultas;
+      totalDeFundos += valorDasMultas;
+    }
+
+    cout << "\nAdicionar motorista? s ou n\n";
+    cin >> escolhaBinaria;
+
+  }
+  cout << "\n\nTotal de arrecadações: " << totalDeFundos;
+  cout << "\nMotorista com maior numero de multas: " << MMNM;
+
+  return 0;
+}
